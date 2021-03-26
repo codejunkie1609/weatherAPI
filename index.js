@@ -15,7 +15,7 @@ weather.then((results)=>{
 async function readWeather(){
     var city = document.getElementById("city").value;
     console.log(city);
-    let x = await fetch("http://api.openweathermap.org/data/2.5/forecast?q="+city+"&appid=eefd75753d8a45c5552be93f0b8ea61d&units=metric");
+    let x = await fetch("https://cors-anywhere.herokuapp.com/api.openweathermap.org/data/2.5/forecast?q="+city+"&appid=eefd75753d8a45c5552be93f0b8ea61d&units=metric");
     let y = await x.json();
     return y;
 }
